@@ -156,7 +156,7 @@ SYMPTOM_REMEDIES = {
 }
 
 
-@app.get("/test")
+@app.get("/")
 def read_root():
     return {"message": "Smart Health Assistant Backend is Running!"}
 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Health Assistant</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            /* background: linear-gradient(to bottom right, #001f3f, #001a33); */
+            background-image: url('h2.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Ensures the image covers the whole screen */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repeating */
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Libre Baskerville', sans-serif;
+            font-weight: 800;
+            color: #00ffcc;
+            overflow: hidden;
+        }
+
+        .assistant-card {
+            background: rgba(0, 20, 40, 0.9);
+            border: 2px solid rgba(0, 255, 204, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
+            padding: 40px;
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #00ffcc;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        .status-box {
+            background: rgba(0, 255, 204, 0.1);
+            border: 1px solid rgba(0, 255, 204, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #f0f0f0;
+            margin-top: 10px;
+            min-height: 60px;
+            text-align: left;
+            box-shadow: inset 0 0 15px rgba(0, 255, 204, 0.3);
+        }
+
+        .mic-area {
+            margin: 20px 0;
+        }
+
+        .mic-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 204, 1), rgba(0, 255, 204, 0.2));
+            border: none;
+            font-size: 40px;
+            cursor: pointer;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .mic-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 255, 204, 1);
+        }
+
+        .mic-button:active {
+            transform: scale(0.9);
+        }
+
+        .footer-note {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+        }
+
+        strong {
+            color: #ff66ff;
+        }
+
+        /* Optional cool animation */
+        @keyframes glowing-border {
+            0% { box-shadow: 0 0 10px #00ffcc; }
+            50% { box-shadow: 0 0 30px #00ffcc; }
+            100% { box-shadow: 0 0 10px #00ffcc; }
+        }
+
+        .assistant-card {
+            animation: glowing-border 3s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="assistant-card">
+        <h1> &#x1F52C; Smart Health Assistant</h1>
+        
+        <div class="status-box" id="output">
+            <b>Press the mic to speak with your Health Assistant...</b>
+        </div>
+
+        <div class="mic-area">
+            <!-- <button class="mic-button" onclick="startListening()">Mic</button> -->
+            <button class="mic-button" onclick="startListening()">&#x1F399;</button>
+
+
+        </div>
+
+        <p class="footer-note">Your AI health companion &#x2695;&#xFE0F; - Stay Healthy, Stay Smart!</p>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

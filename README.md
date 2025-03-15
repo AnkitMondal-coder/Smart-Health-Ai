@@ -1,11 +1,10 @@
-# 📊 Dashboard Project - Full Stack (FastAPI + HTML/JS/CSS)
+# 📊 Smart Health Assistant Project - Full Stack (FastAPI + HTML/JS/CSS)
 
 ## 📂 Project Structure
 ```
 dashboard/                # Frontend Folder
 ├── index.html             # Main Dashboard UI
 ├── dashboard.js           # Fetches and displays reports from backend
-├── styles.css              # Simple and clean CSS for UI
 
 backend/                    # Backend Folder (FastAPI)
 ├── main.py                  # FastAPI application
@@ -32,13 +31,14 @@ backend/                    # Backend Folder (FastAPI)
 
 Navigate to `backend` folder and run:
 ```bash
-uvicorn main:app --reload
+uvicorn backend.main:app --reload
 ```
 
 Backend will start at:
 ```
-http://localhost:8000
+http://localhost:8000 (locally) 
 ```
+But as we are running the backend in render.com so no need to specify any port.
 
 ### 2️⃣ Start the Frontend (HTML Dashboard)
 
@@ -50,8 +50,9 @@ python -m http.server 8080
 ```
 Open browser at:
 ```
-http://localhost:8080/index.html
+http://localhost:8080/index.html (locally)
 ```
+Here also we are directly deploying from Github so no need to specify any port like - 8080. 
 
 #### Option B: VS Code Live Server (Recommended for VS Code Users)
 - Install **Live Server** extension.
@@ -76,7 +77,7 @@ Open browser at the URL shown (usually something like `http://localhost:3000`).
 ## ⚙️ Example Fetch Code (in `dashboard.js`)
 
 ```javascript
-fetch('http://localhost:8000/reports')
+fetch('http://localhost:8000/reports') (locally)
     .then(response => response.json())
     .then(data => {
         // Populate dashboard with data
@@ -94,7 +95,6 @@ project-root/
 ├── dashboard/
 │   ├── index.html            # Dashboard UI
 │   ├── dashboard.js          # Fetch and display logic
-│   ├── styles.css             # Styling
 ```
 
 ---
@@ -106,6 +106,6 @@ project-root/
 
 ---
 
-## 💬 Need Help?
-If you want, I can also create a starter pack zip with all these files + a working example of `main.py`, `index.html`, `dashboard.js`, and `styles.css`. Want me to generate that for you? 😎
+
+
 

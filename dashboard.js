@@ -26,7 +26,7 @@ function startListening() {
 }
 
 function sendCommandToBackend(command) {
-    fetch('https://smart-health-ai.onrender.com/api/process', {
+    fetch('https://smart-health-ai.onrender.com/analyze-symptoms/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({symptom: command})

@@ -77,7 +77,7 @@ Open browser at the URL shown (usually something like `http://localhost:3000`).
 ## ⚙️ Example Fetch Code (in `dashboard.js`)
 
 ```javascript
-fetch('http://localhost:8000/reports') (locally)
+fetch('http://localhost:8000/reports') # locally
     .then(response => response.json())
     .then(data => {
         // Populate dashboard with data
